@@ -17,9 +17,8 @@
     <div class="col-6">
       
             <% @tweeterclones.each do |tweeterclone| %>
-            
-              <div style="background-color:#fff;padding-left:0px !important;padding-right:0px !important">
-                <label style="padding:10px 0px 10px 100px">Tweeted on <%= tweeterclone.created_at%></label> <br>
+             <div style="background-color:#fff;padding-left:0px !important;padding-right:0px !important">
+                <!--<label style="padding:10px 0px 10px 100px">Tweeted on <%= tweeterclone.created_at%></label> <br>-->
                 <label style="padding:10px 0px 0px 30px"><%= tweeterclone.content%></label> <br>
                 <label  style="padding-left:50%"><span style="color:#007bff" class='glyphicon glyphicon-eye-open'></span><%= link_to  'Show', tweeterclone %></label>
                 <label style="padding-left:20px"><span style="color:#007bff" class="glyphicon glyphicon-pencil"></span><%= link_to 'Edit', edit_tweeterclone_path(tweeterclone) %></label>
