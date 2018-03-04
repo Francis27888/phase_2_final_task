@@ -5,7 +5,6 @@ class TweeterclonesController < ApplicationController
   # GET /tweeterclones.json
   def index
     @tweeterclones = Tweeterclone.all
-    @totaltweet=Tweeterclone.all.count
   end
 
   # GET /tweeterclones/1
