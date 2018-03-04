@@ -1,0 +1,15 @@
+<h3 style="margin-top:30px"><center> the following contents.</center>Tweet</h3>
+
+<%= form_with(model: @tweeterclone, url: tweeterclones_path, local: true) do |form| %>
+  <%= form.hidden_field :content %>
+
+  <p style="margin-top:30px;font-size:20px">Content:<%= @tweeterclone.content %></p>
+  <%= form.submit  "submit",class:'glyphicon glyphicon-save btn btn-success' ,style:'float:left;margin:20px;width:200px'%>
+<% end %>
+
+<%= form_with(model: @tweeterclone, url: new_tweeterclone_path, local: true, method: 'get') do |form| %>
+  <%= form.hidden_field :content %>
+  <%= form.submit  "Back", name: 'back',class:'glyphicon glyphicon-arrow-left btn btn-primary',style:'margin:20px;width:200px' %>
+  
+
+<% end %>

@@ -1,0 +1,63 @@
+<p id="notice"><%= notice %></p>
+<!--<h1>Tweeterclones</h1>-->
+<div class="row">
+    <div class="col" style="height:280px;background-color:#fff;padding-left:0px !important;padding-right:0px !important">
+      <div class="" style="height:130px;background-color:#1DA1F2"></div>
+      <div>
+       <div style="text-align:center !important"> <a href="#" >Kalisa Athanasie</a><br><span>@Kalisa</span></div><br>
+        <label style="margin-left:50px">Tweeets</label><label style="margin-left:50px">Following</label><br>
+        <label style="margin-left:70px"><%=  @totaltweet%></label><label style="margin-left:90px">20</label>
+      </div><br>
+      <div>
+        <%= link_to new_tweeterclone_path, class: 'btn btn-success',style:'width:100%' do %>
+          <i class="glyphicon glyphicon-plus"></i> New Tweeterclone
+      <% end %></div>
+    </div>
+    
+    <div class="col-6">
+      
+            <% @tweeterclones.each do |tweeterclone| %>
+            
+              <div style="background-color:#fff;padding-left:0px !important;padding-right:0px !important">
+                <label style="padding:10px 0px 10px 100px">Tweeted on <%= tweeterclone.created_at%></label> <br>
+                <label style="padding:10px 0px 0px 30px"><%= tweeterclone.content%></label> <br>
+                <label  style="padding-left:50%"><span style="color:#007bff" class='glyphicon glyphicon-eye-open'></span><%= link_to  'Show', tweeterclone %></label>
+                <label style="padding-left:20px"><span style="color:#007bff" class="glyphicon glyphicon-pencil"></span><%= link_to 'Edit', edit_tweeterclone_path(tweeterclone) %></label>
+                <label style="padding-bottom:30px;padding-left:20px"><span style="color:#007bff" class="glyphicon glyphicon-trash"></span><%= link_to 'Destroy', tweeterclone, method: :delete, data: { confirm: 'Are you sure?' } %></label>
+              </div>
+              <br>
+            <% end %>
+          </tbody>
+        </table>
+    </div>
+    <div class="col">
+      <div class="col" style="width: 280px;height:350px;background-color:#fff;margin-bottom:20px;padding:30px !important">
+        <label>Who to follow</label>
+        <a href="#" style="font-size:14px;">Reflesh</a>
+        <a href="#" style="font-size:14px;">View All</a>
+      </div>
+      <div class="col" style="width: 280px;height:200px;background-color:#fff;padding:10px !important">
+        <label style="font-size:14px;color: #657786;">© 2018 Twitter</label>
+        <a href="#" style="font-size:14px;color: #657786;">About</a>
+        <a href="#" style="font-size:14px;color: #657786;">Help Center</a>
+        <a href="#" style="font-size:14px;color: #657786;">Terms</a><br>
+        <a href="#" style="font-size:14px;color: #657786;">Privacy policy</a>
+        <a href="#" style="font-size:14px;color: #657786;">Cookies</a>
+        <a href="#" style="font-size:14px;color: #657786;">Ads info</a>
+        <a href="#" style="font-size:14px;color: #657786;">Brand</a>
+        <a href="#" style="font-size:14px;color: #657786;">Blog</a><br>
+        <a href="#" style="font-size:14px;color: #657786;"> Status</a>
+        <a href="#" style="font-size:14px;color: #657786;">Apps</a>
+        <a href="#" style="font-size:14px;color: #657786;">Jobs</a>
+        <a href="#" style="font-size:14px;color: #657786;"> Marketing</a>
+        <a href="#" style="font-size:14px;color: #657786;"> <a href="#" style="font-size:14px;color: #657786;">Businesses</a><br>
+        <a href="#" style="font-size:14px;color: #657786;">Developers</a><hr>
+        <a href="#" style="font-size:14px;color: #657786;margin-left:50px">Advertise with Twitter</a
+      </div>
+    </div>
+  </div>
+
+
+
+<br>
+

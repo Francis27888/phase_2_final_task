@@ -1,0 +1,26 @@
+<%= form_with(model: @tweeterclone,local: true, url: choose_new_or_edit) do |f| %>
+  <% if @tweeterclone.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tweeterclone.errors.count, "error") %> Please your tweet must be between 1 and 140 character(s)</h2>
+
+      <ul>
+      <% @tweeterclone.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+ <br><br>
+  <div class="field form-group row">
+    <br>
+    <%= f.label :content, class: 'col-sm-2 control-label', style:'font-size:40px' %>
+    <div class="col-sm-10">
+      <%= f.text_area :content, class: 'form-control' %>
+    </div>
+  </div>
+  <%= link_to 'Back', tweeterclones_path , class: 'btn btn-success back', style:'margin-left:700px;width:200px' %>
+   <%= f.submit 'Tweet', class: 'btn btn-primary', style:'width:200px'%>
+ 
+<% end %>
+
+
