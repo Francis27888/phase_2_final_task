@@ -25,9 +25,12 @@
               </div>
               <br>
             <% end %>
+            <div class="container pagination justify-content-center" >
+              <%= paginate @tweeterclones, theme: 'twitter-bootstrap-4'%>
+            </div>
     </div>
     <div class="col">
-      <div class="col" style="width: 280px;height:350px;background-color:#fff;margin-bottom:20px;padding:30px !important">
+      <div class="col" style="width: 280px;height:270px;background-color:#fff;margin-bottom:20px;padding:30px !important">
         <label>Who to follow</label>
         <a href="#" style="font-size:14px;">Reflesh</a>
         <a href="#" style="font-size:14px;">View All</a>

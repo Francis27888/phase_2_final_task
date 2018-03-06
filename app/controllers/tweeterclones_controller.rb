@@ -4,7 +4,7 @@ class TweeterclonesController < ApplicationController
   # GET /tweeterclones
   # GET /tweeterclones.json
   def index
-    @tweeterclones = Tweeterclone.all
+    @tweeterclones = Tweeterclone.all.page params[:page]
     @tweetercount = Tweeterclone.all.count
   end
 
